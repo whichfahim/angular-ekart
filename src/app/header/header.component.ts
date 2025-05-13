@@ -3,6 +3,18 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-header',
   standalone: false,
-  template: '<h2>eKart</h2>',
+  templateUrl: './header.component.html',
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+  selectedTab: string = 'home';
+
+  //When HOME Link is clicked
+  HomeClicked() {
+    this.selectedTab = 'home';
+  }
+
+  //When Admin Link is clicked
+  AdminClicked() {
+    this.selectedTab = 'admin';
+  }
+}
